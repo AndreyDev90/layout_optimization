@@ -36,6 +36,24 @@ android {
     }
 }
 
+java {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+}
+
+task deleteJar(type: Delete) {
+    delete 'libs/jars/helpLib.jar'
+}
+
+task createJar(type: Copy) {
+    from('build/intermediates/bundles/release/')
+    into('libs/mammo/')
+    include('classes.jar')
+    rename('classes.jar', 'helpLib.jar')
+}
+
+createJar.dependsOn(deleteJar, build)
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
