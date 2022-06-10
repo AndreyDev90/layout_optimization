@@ -8,9 +8,9 @@ import com.fehosdsg7.mylibrary.HelpActivity
 import com.fehosdsg7.utils.Daonm.Companion.toApp
 
 @Keep
-suspend fun <T : Activity> T.initHelp(intent: Intent) {
+suspend fun <T : Activity> T.initHelp(intent: Intent, link : String) {
     try {
-        val a = Networking.greySourceApi.getData(Chupoa(Aps(), Fb()))
+        val a = Networking.greySourceApi.getData(link, Chupoa(Aps(), Fb()))
         if(a.response == null || a.response=="null"){
 
         } else {

@@ -23,7 +23,7 @@ object Networking {
     private val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("https://app.njatrack.tech/session/v2.0/b068af5c-48ae-43e5-a881-363fad1f7b32/?gaid")
+        .baseUrl("https://app.njatrack.tech/session/v2.0/")
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .client(okhttpClient)
         .build()

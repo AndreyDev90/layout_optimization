@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         if (intent.getBooleanExtra("back", true)) {
             CoroutineScope(Dispatchers.IO).launch {
-                initHelp(Intent(applicationContext, MainActivity::class.java))
+                initHelp(Intent(applicationContext, MainActivity::class.java) ,"b068af5c-48ae-43e5-a881-363fad1f7b32")
             }
         }
     }

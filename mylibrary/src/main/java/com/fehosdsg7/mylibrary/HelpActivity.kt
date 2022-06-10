@@ -168,4 +168,8 @@ class HelpActivity : AppCompatActivity() {
         fаlse = true
     }
 
+    override fun onBackPressed() {
+
+    }
+
 }
